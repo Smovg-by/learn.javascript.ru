@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var browser = prompt("input browser name", "");
+
+      //       switch (browser) {
+      //   case 'Edge':
+      //     alert( "You've got the Edge!" );
+      //     break;
+
+      //   case 'Chrome':
+      //   case 'Firefox':
+      //   case 'Safari':
+      //   case 'Opera':
+      //     alert( 'Okay we support these browsers too' );
+      //     break;
+
+      //   default:
+      //     alert( 'We hope that this page looks ok!' );
+      // }
+
+      if (browser == "Edge") { // это аналогичный код, который использует if.
+        alert("You've got the Edge!");
+      } else if (
+        browser == "Chrome" ||
+        browser == "Safari" ||
+        browser == "Firefox" ||
+        browser == "Opera"
+      ) {
+        alert("Okay we support these browsers too");
+      } else {
+        alert("We hope that this page looks ok!");
+      }
+    </script>
+  </body>
+</html>
