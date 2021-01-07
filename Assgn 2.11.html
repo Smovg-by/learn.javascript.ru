@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var whoIsThere = "";
+      var whoIsThere = prompt("Who is there?", "");
+
+      if (whoIsThere == "admin") {
+        // alert('admin'); // debug
+        var inputPassword = prompt("input password");
+        if (inputPassword == 123) {
+          alert("Hello, admin!");
+        } else if (inputPassword == "") {
+          alert("you have input nothing");
+        } else {
+          alert("Wrong password");
+        }
+      } else if (whoIsThere == "" || whoIsThere == null) {
+        alert("Cancelled");
+      } else {
+        alert("I dont know you");
+      }
+    </script>
+  </body>
+</html>
