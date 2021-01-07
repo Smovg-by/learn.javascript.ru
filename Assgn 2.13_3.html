@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num;
+
+      do {  // этот цикл запрашивает ввод, пока не будет получено чило большее 100 или нажата Отмена
+        num = prompt("Введите число, большее 100?", 0);
+      } while (num <= 100 && num); // логический оператор && возвращает первое ложное значение и действует, пока оба условия true
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var lastNumber = +prompt("Input the last number", "");
+      next: for (var i = 2; i <= lastNumber; i++) {
+        for (var j = 2; j < i; j++) {
+          if (i % j == 0) continue next;
+        }
+        console.log(i);
+      }
+    </script>
+  </body>
+</html>
