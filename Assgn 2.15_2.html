@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var a = prompt("input number_a", ""); // Первый вариант решения через if
+      var b = prompt("input number_b", "");
+
+      function getSmallestNumber(a, b) {
+        if (a > b) {
+          return b;
+        } else {
+          return a;
+        }
+      }
+      var smallestNumber = getSmallestNumber(a, b);
+      alert("smallest number is: " + smallestNumber);
+
+      var a = prompt("input number_a", ""); // второй вариант решения через ?
+      var b = prompt("input number_b", "");
+
+      function getSmallestNumber(a, b) {
+        return (a > b) ? b : a;
+      }
+      var smallestNumber = getSmallestNumber(a, b);
+      alert("smallest number is: " + smallestNumber);
+
+
+    </script>
+  </body>
+</html>
