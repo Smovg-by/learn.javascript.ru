@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [7, 2, 9, 4, 3, 6, 1];
+
+      alert(`Исходный массив: ${arr}`);
+
+      function selectionSort(arr) { // повторяем внутренний цикл, пока не прогоним все цифры в массиве
+        for (i = 0; i < arr.length; i++) {
+          let minValue = arr[i];
+          let minIndex = i;
+
+          for (j = i + 1; j < arr.length; j++) {
+            // проходим по всему массиву и ищем чило, меньшее arr[i], и если находим, записываем его как минимальное число. Если до конца этого перебора находится меньшее, что изем дальше.
+            if (minValue > arr[j]) {
+              minValue = arr[j];
+              minIndex = j;
+            }
+          }
+          // делаем стандартный swap
+          let temp = arr[i];
+          arr[i] = minValue;
+          arr[minIndex] = temp;
+        }
+      }
+
+      selectionSort(arr);
+
+      alert(`Отсортированный массив: ${arr}`);
+    </script>
+  </body>
+</html>
