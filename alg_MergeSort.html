@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [2,7,5,3,1,0,7,9,4];
+
+      // в функции ниже мы разделяем массив на множество массивов до одного элемента.
+
+      // в функции ниже мы объединяем два ОТСОРТИРОВАННЫХ массива в один в правильном порядке
+
+      let merge = (arrLeft, arrRight) => {
+        let arrSort = [];
+        let i = (j = 0);
+        // сравниваем два массива, поочередно сдвигая указатели
+        while (i < arrLeft.length && j < arrRight.length) {
+          arrSort.push(arrLeft[i] < arrRight[j] ? arrLeft[i++] : arrRight[j++]);
+        }
+        // обрабатываем последний элемент при разной длине массивов
+        // и возвращаем один отсортированный массив
+        return (sortedArr = [
+          ...arrSort,
+          ...arrLeft.slice(i),
+          ...arrRight.slice(j),
+        ]); // Многоточие это spread соедияет элементы в один массив
+      };
+
+      let mergeSort = function mergeSort(arr) {
+        // Проверяем корректность переданных данных
+        if (!arr || !arr.length) {
+          return null;
+        }
+        //Если массив содержит один элемент просто возвращаем его
+        if (arr.length <= 1) {
+          return arr;
+        }
+        // Находим середину массива и делим его на два
+        let middle = Math.floor(arr.length / 2);
+        let arrLeft = arr.slice(0, middle);
+        let arrRight = arr.slice(middle);
+        // Для новых массивов снова вызываем сортировку,
+        // сливаем их и возвращаем снова единый массив
+        return merge(mergeSort(arrLeft), mergeSort(arrRight));
+      };
+
+      mergeSort(arr);
+
+    </script>
+  </body>
+</html>
